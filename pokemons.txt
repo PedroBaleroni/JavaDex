@@ -22,4 +22,4 @@ pokemons.add(new Pokemon(179, "Mareep", "Eletrico", 60, 7.8f, 60, true));//Renan
 pokemons.add(new Pokemon(712, "Bergmite","Gelo",null, 70, 99.5f, 1,true));//Ryan Rigoto
 pokemons.add(new Pokemon(226, "Mantine","Água","Voador",85, 220, 2.1,false));//WILLIAN WITTIENZO
 pokemons.add(new Pokemon(25, "Pikachu","Eletrico", 35, 6.0f, 40,true));//Pedro Baleroni
-Pokemon hoppip = new Pokemon(3, "Hoppip", "Planta", 40, 0.5f, 4, true); // João Victor Ramalho Alves
+pokemons.add(new Pokemon(3, "Hoppip", "Planta", 40, 0.5f, 4, true)); // João Victor Ramalho Alves
