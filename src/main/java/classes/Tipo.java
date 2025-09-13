@@ -9,10 +9,10 @@ package classes;
  * @author pedro
  */
 public class Tipo {
-    int indice;
-    String nome;
-    int fraqueza;
-    int resistencia;
+    private int indice;
+    private String nome;
+    private int fraqueza;
+    private int resistencia;
     
     public Tipo(int indice, String nome){
         this.indice = indice;
@@ -24,6 +24,10 @@ public class Tipo {
         this.nome = nome;
         this.fraqueza = fraqueza;
         this.resistencia = resistencia;
+    }
+    
+    public String getNome(){
+        return this.nome;
     }
     
     

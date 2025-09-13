@@ -24,8 +24,10 @@ public class main {
             Tipo agua = new Tipo(2,"Agua");
             Tipo planta = new Tipo(3, "Planta", 1, 2);
             Tipo eletrico = new Tipo(4, "Eletrico",3, 2);
-           
-            System.out.println(fogo.indice);
+              
+            Pokemon pikachu = new Pokemon(25, "Pikachu",eletrico, 35, 6.0f, 40,true);//Pedro Baleroni
+
+            System.out.println(pikachu);
             
         }
 }
