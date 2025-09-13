@@ -22,7 +22,7 @@ public class Tipo {
     public Tipo (int indice, String nome, int fraqueza, int resistencia){
         this.indice =indice;
         this.nome = nome;
-        this.fraqueza = franqueza;
+        this.fraqueza = fraqueza;
         this.resistencia = resistencia;
     }
     
