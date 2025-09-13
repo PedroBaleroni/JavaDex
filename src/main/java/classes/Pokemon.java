@@ -16,15 +16,15 @@ public class Pokemon {
     }
     private int numero;
     private String nome;
-    private String tipo1;
-    private String tipo2;
+    private Tipo tipo1;
+    private Tipo tipo2;
     private int vida;
     private float peso;
     private int altura; //altura em centimetros
     private boolean evolui;
     
     public Pokemon(int numero, String nome,
-            String tipo1, String tipo2, 
+            Tipo tipo1, Tipo tipo2, 
             int vida, float peso, 
             int altura, boolean evolui){
         this.numero = numero;
@@ -38,7 +38,7 @@ public class Pokemon {
         
     }
     public Pokemon(int numero, String nome,
-            String tipo1,
+            Tipo tipo1,
             int vida, float peso, 
             int altura, boolean evolui){
         this.numero = numero;
@@ -66,16 +66,16 @@ public class Pokemon {
         this.numero = numero;
     }
     
-    public void setTipo(String tipo1, String tipo2){
+    public void setTipo(Tipo tipo1, Tipo tipo2){;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
     }
     
     public String getTipo(){
         if(this.tipo2 == null){
-            return this.tipo1;
+            return this.tipo1.getNome();
         }else{
-            return this.tipo1 + "/" + this.tipo2;
+            return this.tipo1.getNome() + "/" + this.tipo2.getNome();
         }
     }
     
@@ -83,10 +83,10 @@ public class Pokemon {
      *
      * @return
      */
-    @Override
+    /*@Override
     public String toString(){
         return this.nome + " - " + this.numero;
-    }
+    }*/
 
     
 }
