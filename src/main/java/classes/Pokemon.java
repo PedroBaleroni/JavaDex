@@ -70,13 +70,16 @@ public class Pokemon {
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
     }
+    public String getFraquezas(){
+        return this.tipo1.getFraquezas();
+    }
+    public String getResistencias(){
+        return this.tipo1.getResistencias();
+    }
     
-    public String getTipo(){
-        if(this.tipo2 == null){
-            return this.tipo1.getNome();
-        }else{
-            return this.tipo1.getNome() + "/" + this.tipo2.getNome();
-        }
+    public Tipo getTipo(){
+        return this.tipo1;
+        
     }
     
     /**
