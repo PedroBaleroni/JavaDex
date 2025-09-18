@@ -49,6 +49,7 @@ Criando uma Pokedex em Java
 - Remover Vida
 - Remover Evolui
 - Criar:
+    - Tipos: List<Class Tipo> => Lista de Tipos do Pokemon
     - EvoluiPara: Class Pokemon => Pokemon para qual o Pokemon evolui
     - EvoluiEm: int => Nivel que o Pokemon deve ter para evoluir
     - isLendario: boolean => informa se o Pokemon é Lendário/Mítico
