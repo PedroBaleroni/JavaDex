@@ -52,15 +52,23 @@ public class Pokemon {
         return this.numero;
     }
     
-    public String getFraquezas(){
-        return this.tipo1.getFraquezas();
+    public String getTipoFraquezas(){
+        String aux = "";
+        for(Tipo t: tipos){
+            aux += t.getFraquezas();
+        }
+        return aux;
     }
-    public String getResistencias(){
-        return this.tipo1.getResistencias();
+    public String getTipoResistencias(){
+        String tipos = "";
+        for(Tipo t: this.tipos){
+            tipos += t.getResistencias();
+        }
+        return tipos;
     }
     
-    public Tipo getTipo(){
-        return this.tipo1;
+    public List<Tipo> getTipos(){
+        return this.tipos;
         
     }
     /**
@@ -77,9 +85,13 @@ public class Pokemon {
         this.numero = numero;
     }
     
-    public void setTipo(Tipo tipo1, Tipo tipo2){;
-        this.tipo1 = tipo1;
-        this.tipo2 = tipo2;
+    public void setTipos(List<Tipo> tipos){
+        
+        this.tipos = new ArrayList();
+        for(Tipo t: tipos){
+            this.tipos.add(t);
+        }
+     
     }
     
     /* Função toString()
