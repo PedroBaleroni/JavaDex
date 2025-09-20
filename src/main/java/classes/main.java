@@ -22,12 +22,15 @@ public class main {
             
             Tipo fogo = new Tipo(1,"Fogo");
             Tipo agua = new Tipo(2,"Agua");
-            Tipo planta = new Tipo(3, "Planta", 1, 2);
-            Tipo eletrico = new Tipo(4, "Eletrico",3, 2);
+            Tipo planta = new Tipo(3, "Planta", fogo, agua);
+            Tipo eletrico = new Tipo(4, "Eletrico",planta, agua);
+            
+            List fraquezas = new ArrayList<>(List.of(agua,eletrico));
+            fogo.setFraquezas(fraquezas);
               
-            Pokemon pikachu = new Pokemon(25, "Pikachu",eletrico, 35, 6.0f, 40,true);//Pedro Baleroni
+            Pokemon pikachu = new Pokemon(25, "Pikachu",fogo, 35, 6.0f, 40,true);//Pedro Baleroni
 
-            System.out.println(pikachu);
+            System.out.println(pikachu.getFraquezas());
             
         }
 }

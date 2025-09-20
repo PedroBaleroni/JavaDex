@@ -12,10 +12,10 @@ import java.util.ArrayList;
  *
  * @author pedro
  */
+
+ // Instância da Classe
 public class Pokemon {
 
-    public Pokemon() {
-    }
     private int numero;
     private String nome;
     private List<Tipo> tipos;
@@ -23,7 +23,11 @@ public class Pokemon {
     private float peso;
     private int altura; //altura em centimetros
     private boolean evolui;
-    
+    // Construtor da Classe
+    public Pokemon() {
+    }
+    // Sobrecarga (OverLoad) do Construtor
+    // Mesma função recebendo funções parametrizadas de forma diferente.
     public Pokemon(int numero, String nome,
             List<Tipo> tipos, 
             int vida, float peso, 
@@ -40,10 +44,6 @@ public class Pokemon {
         this.evolui = evolui;
         
     }
-    
-    public void setNome(String nome){
-        this.nome = nome;
-    }
     public String getNome(){
         return this.nome;
     }
@@ -52,6 +52,27 @@ public class Pokemon {
         return this.numero;
     }
     
+    public String getFraquezas(){
+        return this.tipo1.getFraquezas();
+    }
+    public String getResistencias(){
+        return this.tipo1.getResistencias();
+    }
+    
+    public Tipo getTipo(){
+        return this.tipo1;
+        
+    }
+    /**
+     * Setters
+     * Funções de atribuição de valores de valores de atributos da classe
+     * Utilizado quando o atributo é privado
+     * @param nome
+     */
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
     public void setNumero(int numero){
         this.numero = numero;
     }
@@ -61,22 +82,25 @@ public class Pokemon {
         this.tipo2 = tipo2;
     }
     
-    public String getTipo(){
-        if(this.tipo2 == null){
-            return this.tipo1.getNome();
-        }else{
-            return this.tipo1.getNome() + "/" + this.tipo2.getNome();
-        }
-    }
-    
-    /**
-     *
-     * @return
+    /* Função toString()
+     * Função padrão das classes
+     * - Utilizado para transforma a classe em uma constante String
+     * - Para imprimir em funções "System.out.println()" por exemplo
+     * 
+     *  ## Como Padrão entrega um enderçamento para a Classe ##
      */
-    /*@Override
+    // Sobrescrita da Função toString()
+    /*
+     * Modificamos em uma SubClasse a Função, para funcionar de uma forma distinta ao padrão
+     * indicada pelo "@Override"
+     * 
+     * No caso abaixo mudamos o toString para uma saída coerente ao nosso uso, trazendo uma string
+     * com o atributo _nome_ da Classe 
+     */
+    @Override
     public String toString(){
-        return this.nome + " - " + this.numero;
-    }*/
+        return this.nome;
+    }
 
     
 }

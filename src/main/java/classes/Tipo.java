@@ -97,6 +97,41 @@ public class Tipo {
         }
     }
     
+    public String getResistencias(){
+        String resistencias = "";
+        for (Tipo t: this.resistencias){
+            resistencias += t.getNome() + " ";
+        }
+        return resistencias;
+    }
+    
+    public void addResistencias(List<Tipo> resistencias){
+        for(Tipo t: resistencias){
+            this.resistencias.add(t);
+        }
+    }
+    
+    /**
+     * Setters
+     * Funções de atribuição de valores de valores de atributos da classe
+     * Utilizado quando o atributo é privado
+     * @param nome
+     */
+    
+    public void setFraquezas(List<Tipo> fraquezas){
+        this.fraquezas = new ArrayList();
+        for(Tipo t: fraquezas){
+        this.fraquezas.add(t);
+        }
+    }
+    
+    
+    public void setResistencias(List<Tipo> resistencias){
+        this.resistencias = new ArrayList();
+        for(Tipo t: resistencias){
+        this.resistencias.add(t);
+        }
+    }
     
     
 }
