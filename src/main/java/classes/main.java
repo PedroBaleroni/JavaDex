@@ -27,10 +27,11 @@ public class main {
             
             List fraquezas = new ArrayList<>(List.of(agua,eletrico));
             fogo.setFraquezas(fraquezas);
-              
-            Pokemon pikachu = new Pokemon(25, "Pikachu",fogo, 35, 6.0f, 40,true);//Pedro Baleroni
+             
+            List<Tipo> tipo_do_pokemon = new ArrayList<>(List.of(eletrico));
+            Pokemon pikachu = new Pokemon(25, "Pikachu",tipo_do_pokemon, 35, 6.0f, 40,true);//Pedro Baleroni
 
-            System.out.println(pikachu.getFraquezas());
+            System.out.println(pikachu.getTipoFraquezas());
             
         }
 }
