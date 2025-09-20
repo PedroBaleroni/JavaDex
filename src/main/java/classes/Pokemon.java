@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package classes;
+import java.util.List;
+import java.util.ArrayList;
 
 
 
@@ -16,39 +18,27 @@ public class Pokemon {
     }
     private int numero;
     private String nome;
-    private Tipo tipo1;
-    private Tipo tipo2;
+    private List<Tipo> tipos;
     private int vida;
     private float peso;
     private int altura; //altura em centimetros
     private boolean evolui;
     
     public Pokemon(int numero, String nome,
-            Tipo tipo1, Tipo tipo2, 
+            List<Tipo> tipos, 
             int vida, float peso, 
             int altura, boolean evolui){
         this.numero = numero;
         this.nome = nome;
-        this.tipo1 = tipo1;
-        this.tipo2 = tipo2;
+        this.tipos = new ArrayList();
+        for(Tipo t: tipos){
+        this.tipos.add(t);
+        }
         this.vida = vida;
         this.peso = peso;
         this.altura = altura;
         this.evolui = evolui;
         
-    }
-    public Pokemon(int numero, String nome,
-            Tipo tipo1,
-            int vida, float peso, 
-            int altura, boolean evolui){
-        this.numero = numero;
-        this.nome = nome;
-        this.tipo1 = tipo1;
-        this.tipo2 = null;
-        this.vida = vida;
-        this.peso = peso;
-        this.altura = altura;
-        this.evolui = evolui;   
     }
     
     public void setNome(String nome){
