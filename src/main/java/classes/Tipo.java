@@ -13,21 +13,18 @@ import java.util.ArrayList; // Funcional
 
   // Instância da Classe
 public class Tipo {
-    private int indice;
     private String nome;
     private List<Tipo> fraquezas;
     private List<Tipo> resistencias;
 
    // Construtor da Classe
-    public Tipo(int indice, String nome){
-        this.indice = indice;
+    public Tipo(String nome){
         this.nome = nome;
     }
 
     // Sobrecarga (OverLoad) do Construtor
     // Mesma função recebendo funções parametrizadas de forma diferente.  
-    public Tipo (int indice, String nome, Tipo fraqueza, Tipo resistencia){
-        this.indice =indice;
+    public Tipo (String nome, Tipo fraqueza, Tipo resistencia){
         this.nome = nome;
         this.fraquezas = new ArrayList();
         this.fraquezas.add(fraqueza);
