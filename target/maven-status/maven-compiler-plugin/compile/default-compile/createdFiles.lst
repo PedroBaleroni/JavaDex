@@ -1,4 +1,5 @@
 classes\Pokemon.class
 classes\main.class
 classes\PokemonLocal.class
+database\database.class
 classes\Tipo.class

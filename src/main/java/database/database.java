@@ -21,8 +21,12 @@ public class database {
     public database(){
         this.pokemons = new ArrayList();
         this.tipos = new ArrayList();
-        // this.seeder();
+        
+    }
+    
+    public void inicialize(){
         this.seederTipo();
+        this.seederPokemon();
     }
     
     public void seederTipo(){
@@ -30,23 +34,41 @@ public class database {
     //criar as fraquezas
     // Criar as resistencias 
         Tipo aco = new Tipo("Aco");
+        tipos.add(aco);
         Tipo agua = new Tipo("Agua");
+        tipos.add(agua);
         Tipo dragao = new Tipo("Dragao");
+        tipos.add(dragao);
         Tipo eletrico = new Tipo("Eletrico");
+        tipos.add(eletrico);
         Tipo fada= new Tipo("Fada");
+        tipos.add(fada);
         Tipo fantasma= new Tipo("Fantasma");
+        tipos.add(fantasma);
         Tipo fogo= new Tipo("Fogo");
+        tipos.add(fogo);
         Tipo gelo= new Tipo("Gelo");
+        tipos.add(gelo);
         Tipo inseto= new Tipo("Inseto");
+        tipos.add(inseto);
         Tipo lutador=new Tipo("Lutador");
+        tipos.add(lutador);
         Tipo normal=new Tipo("Normal");
+        tipos.add(normal);
         Tipo pedra=new Tipo("Pedra");
+        tipos.add(pedra);
         Tipo planta=new Tipo("Planta");
+        tipos.add(planta);
         Tipo psiquico=new Tipo("Psiquico");
+        tipos.add(psiquico);
         Tipo sombrio=new Tipo("Sombrio");
+        tipos.add(sombrio);
         Tipo terrestre=new Tipo("Terrestre");
+        tipos.add(terrestre);
         Tipo venenoso=new Tipo("Venenoso");
+        tipos.add(venenoso);
         Tipo voador=new Tipo("Voador");
+        tipos.add(voador);
         
         // Adrian - Fraquezas do Aço
         List fraquezas = new ArrayList<>(List.of(fogo,terrestre,lutador));
